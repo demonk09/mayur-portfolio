@@ -1,0 +1,34 @@
+import { ArrowUpRight, Car, CheckCircle2, Code2, Cpu, Github, Linkedin, Mail, Radar, ShieldCheck, Terminal, Wrench } from 'lucide-react';
+
+const skills = [
+  ['Python', 'Pytest • OOP • Automation'], ['dSPACE', 'AutomationDesk • ControlDesk'], ['CAN / J1939', 'CAPL • Vector CANalyzer'], ['HIL Testing', 'Embedded • Regression • Functional'], ['Robot Framework', 'End-to-end automation'], ['Web & API', 'Selenium • Postman • JSON/XML'],
+];
+
+const projects = [
+  { tag: 'HIL AUTOMATION', title: 'Python HIL Automation Framework', text: 'Built reusable automation for functional and regression testing around dSPACE AutomationDesk and ControlDesk, reducing manual testing effort by ~40%.', tech: 'Python · Pytest · dSPACE' },
+  { tag: 'VEHICLE NETWORKS', title: 'CAN / J1939 Validation', text: 'Designed and executed communication test cases using CAPL scripting and Vector CANalyzer for embedded automotive systems.', tech: 'CAN · J1939 · CAPL · CANalyzer' },
+  { tag: 'VISION QA', title: 'Display Validation Utility', text: 'Created OpenCV and Tesseract OCR utilities for automated GUI and text-rendering verification during HIL testing.', tech: 'OpenCV · OCR · Python' },
+  { tag: 'WEB AUTOMATION', title: 'API & Data Load Automation', text: 'Validated bulk imports, backend interactions and JSON/XML payloads while evolving scalable automation architecture with Pytest and Katalon.', tech: 'Pytest · Postman · Katalon' },
+];
+
+export default function Home() {
+  return <main>
+    <nav className="nav"><a className="brand" href="#top"><span>MK</span> MAYUR KAMBLE</a><div className="navlinks"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div><a className="navcta" href="#contact">Let’s connect <ArrowUpRight size={16}/></a></nav>
+
+    <section className="hero" id="top"><div className="gridglow"/><div className="hero-copy"><div className="eyebrow"><span className="pulse"/> AUTOMOTIVE · HIL · TEST AUTOMATION</div><h1>Engineering<br/><em>confidence</em><br/>into every test.</h1><p className="lead">I build automation systems that make embedded and web testing faster, repeatable, and measurable — from HIL benches to backend APIs.</p><div className="actions"><a className="primary" href="#work">Explore my work <ArrowUpRight size={18}/></a><a className="secondary" href="mailto:mayur.pradeep.kamble@gmail.com"><Mail size={17}/> Get in touch</a></div></div><div className="hero-visual"><div className="orbit o1"/><div className="orbit o2"/><div className="chip"><Cpu size={30}/><span>HIL</span></div><div className="signal s1">CAN  500 kbps <b>●</b></div><div className="signal s2">J1939  <b>●</b></div><div className="signal s3">PYTEST  PASS <b>✓</b></div><div className="car"><Car size={145} strokeWidth={1}/></div></div></section>
+
+    <section className="metrics"><div><strong>2+</strong><span>Years Automotive<br/>Test Automation</span></div><div><strong>40%</strong><span>Manual effort<br/>reduction</span></div><div><strong>10+</strong><span>Automation &<br/>testing tools</span></div><div><strong>STLC</strong><span>Requirement →<br/>Execution → Defect</span></div></section>
+
+    <section className="section" id="about"><div className="section-label">01 / ABOUT</div><div className="about"><div><h2>Testing is not just<br/><span>finding bugs.</span></h2></div><div><p>I’m an Automation Test Engineer focused on automotive embedded systems, Hardware-in-the-Loop testing, and web/API automation.</p><p>At L&T Technology Services, I’ve built Python automation frameworks, integrated dSPACE environments, validated CAN/J1939 communication, and developed utilities that turn repetitive verification into reliable automation.</p><div className="mini"><CheckCircle2 size={18}/> Agile / Scrum <CheckCircle2 size={18}/> STLC <CheckCircle2 size={18}/> Embedded QA</div></div></div></section>
+
+    <section className="section" id="skills"><div className="section-label">02 / TOOLKIT</div><div className="section-head"><h2>Built with the<br/><span>right tools.</span></h2><p>A practical stack spanning embedded testing, automation frameworks, protocols, computer vision and modern web QA.</p></div><div className="skillgrid">{skills.map(([title,text],i)=><div className="skill" key={title}><div className="skillnum">0{i+1}</div><h3>{title}</h3><p>{text}</p></div>)}</div></section>
+
+    <section className="section work" id="work"><div className="section-label">03 / SELECTED WORK</div><div className="section-head"><h2>Automation that<br/><span>moves the needle.</span></h2><p>Selected engineering work from HIL, embedded validation and web/API automation.</p></div><div className="projects">{projects.map((p,i)=><article className="project" key={p.title}><div className="project-top"><span>{p.tag}</span><span>0{i+1}</span></div><h3>{p.title}</h3><p>{p.text}</p><div className="tech">{p.tech}</div><ArrowUpRight className="project-arrow"/></article>)}</div></section>
+
+    <section className="timeline section"><div className="section-label">04 / EXPERIENCE</div><div className="timeline-wrap"><div className="role"><div className="role-date">2025 — PRESENT</div><div><h3>Engineer — Web Automation</h3><h4>L&T Technology Services</h4><p>API and data-load testing, JSON/XML validation, scalable automation architecture and framework migration across Agile delivery teams.</p></div></div><div className="role"><div className="role-date">2024 — 2025</div><div><h3>Associate Engineer — HIL Testing</h3><h4>L&T Technology Services</h4><p>Python-based HIL automation using dSPACE AutomationDesk/ControlDesk, CAN/J1939 validation, computer-vision display testing and real-time reporting.</p></div></div><div className="role"><div className="role-date">EDUCATION</div><div><h3>B.Tech — Computer Science & Engineering</h3><h4>Rajarambapu Institute of Technology, Sangli</h4><p>CGPA 7.59 · 2017</p></div></div></div></section>
+
+    <section className="contact section" id="contact"><div className="contactbox"><div><div className="section-label">05 / CONTACT</div><h2>Let’s build<br/><em>better tests.</em></h2><p>Open to conversations around automotive test automation, HIL engineering and QA automation opportunities.</p></div><div className="contactlinks"><a href="mailto:mayur.pradeep.kamble@gmail.com"><Mail/> mayur.pradeep.kamble@gmail.com <ArrowUpRight/></a><a href="https://www.linkedin.com" target="_blank"><Linkedin/> LinkedIn <ArrowUpRight/></a><a href="https://github.com/demonk09" target="_blank"><Github/> GitHub <ArrowUpRight/></a></div></div></section>
+
+    <footer><span>© 2026 MAYUR KAMBLE</span><span>PYTHON · HIL · AUTOMATION</span><span>MADE WITH NEXT.JS</span></footer>
+  </main>
+}
