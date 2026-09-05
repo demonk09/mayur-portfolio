@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Mayur Kamble",
+    "slug": "mayur-kamble",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "mayurkamble",
+    "ios": {"supportsTablet": true,"bundleIdentifier":"com.mayurkamble.portfolio"},
+    "android": {"package":"com.mayurkamble.portfolio","versionCode":1},
+    "plugins": ["expo-status-bar"],
+    "web": {"bundler":"metro"},
+    "extra": {"eas":{"projectId":"REPLACE_WITH_EXPO_PROJECT_ID"}}
+  }
+}
